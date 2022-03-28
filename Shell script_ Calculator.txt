@@ -1,0 +1,45 @@
+#! /bin/bash
+
+sum=0
+echo "Enter first number:"
+read n1
+echo "Enter second number:"
+read n2
+
+while :
+do
+
+echo "  "
+echo "What operation would you like to perform?"
+echo "=================================="
+echo "1: Addition"
+echo "2: Subtraction"
+echo "3: Multiply"
+echo "4: Divide"
+echo "5: Enter new numbers"
+echo "0: Exit"
+echo "=================================="
+echo "   "
+echo "Your choice:"
+read ch
+
+case $ch in
+
+1)sum=`expr $n1 + $n2`
+echo "Sum of $n1 and $n2 is $sum"
+;;
+
+2)sum=`expr $n1 - $n2`
+echo "Difference of $n1 and $n2 is $sum"
+;;
+
+3)sum=`expr $n1 \* $n2`
+echo "Product of $n1 and $n2 is $sum"
+;;
+
+4)sum=`expr $n1 / $n2`
+echo "Division of $n1 and $n2 is $sum"
+;;
+
+5)echo "Enter first number:"
+read n1
